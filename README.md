@@ -30,6 +30,7 @@ mkdir -p ~/.config
 cp -Rp dotfiles/{zsh,nvim} ~/.config/
 
 # zsh settings
-echo "source \$HOME/.config/zsh/env.zsh" >> ~/.zshrc
-echo "source \$HOME/.config/zsh/aliases.zsh" >> ~/.zshrc
+for file in env aliases batcat nvim uv; do
+  echo "source \$HOME/.config/zsh/${file}.zsh" >> ~/.zshrc
+done
 ```
